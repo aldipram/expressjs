@@ -7,14 +7,7 @@ const http = require('http');
 const app = express();
 const server = http.createServer(app);
 
-// Konfigurasi CORS
-const corsOptions = {
-    origin: 'https://expressjs-wheat-nine.vercel.app/', // Ganti dengan domain yang diizinkan di production
-    methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    credentials: true
-};
-app.use(cors(corsOptions));
+app.use(cors());
 
 const pool = mysql.createPool({
     host: process.env.DB_HOST,
