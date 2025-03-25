@@ -13,7 +13,8 @@ const server = http.createServer(app);
 //     allowedHeaders: ['Content-Type', 'Authorization'],
 //     credentials: true
 // };
-app.use(cors());
+const url = 'https://expressjs-wheat-nine.vercel.app'
+app.use(cors(url));
 
 // Root route
 app.get('/', (req, res) => {
