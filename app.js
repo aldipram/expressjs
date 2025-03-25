@@ -7,11 +7,9 @@ const http = require('http');
 const app = express();
 const server = http.createServer(app);
 
-
-
 // Konfigurasi CORS
 const corsOptions = {
-    origin: 'http://localhost:2222', // Ganti dengan domain yang diizinkan di production
+    origin: 'https://expressjs-wheat-nine.vercel.app/', // Ganti dengan domain yang diizinkan di production
     methods: ['GET', 'POST', 'PUT', 'DELETE', 'OPTIONS'],
     allowedHeaders: ['Content-Type', 'Authorization'],
     credentials: true
